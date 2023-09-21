@@ -1,0 +1,48 @@
+@use '../base/theme' as t;
+@use '../utilities/variables';
+@use '../utilities/mixins' as m;
+
+header section{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Abel", sans-serif;
+    text-align: center;
+    color: white;
+
+    .abstract h2{
+        font-size: 15px;
+    }
+
+    .abstract h3{
+        font-size: 80px;
+        width: 60%;
+        margin: 0% 20%;
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+
+    .abstract .btn-container{
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+    .abstract .btn-container button{
+        background-color: t.$light-backdrop-color;
+        padding: 10px 20px;
+        border: none;
+        color: t.$text-color;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            background-color: t.$primary-color-dark;
+            transition: .5s ease;
+        }
+    }
+
+}

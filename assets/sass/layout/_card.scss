@@ -1,0 +1,175 @@
+@use "../base/theme" as t;
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+#what-can-you-see {
+  background-image: url(../images/main-pattern.png);
+  width: 100%;
+  > h3 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: t.$text-color;
+    font-size: 2rem;
+    font-family: t.$item-font;
+    padding: t.$base-spacing;
+  }
+}
+
+.cards-container {
+  padding: t.$base-spacing;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  article:nth-child(-n + 3) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 250px;
+    background-color: black;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s ease-in-out; /* Agrega una transición suave */
+
+    figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1.5s ease-in-out; /* Agrega una transición suave */
+    }
+  
+    img {
+      width: 80px;
+      height: auto;
+      object-fit: cover;
+      position: absolute; /* Agrega esta línea */
+      z-index: 1; /* Asegura que la imagen esté encima del contenido del artículo */
+      transition: opacity 1.5s ease-in-out; /* Agrega una transición suave */
+    }
+  
+    .info {
+      h4{
+        margin: 30px;
+        margin-bottom: 40px;
+        font-size: 30px;
+      }
+      display: none;
+      text-align: center;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      padding: 0px;
+      margin: 0px;
+      z-index: 2; /* Asegura que la información esté por encima de la imagen */
+      position: absolute; /* Agrega esta línea */
+      width: 100%; /* Asegura que la información ocupe todo el ancho del artículo */
+      transition: opacity 0.3s ease-in-out; /* Agrega una transición suave */
+    }
+  }
+
+  
+
+  article:nth-last-child(-n + 4):nth-child(n + 4) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 250px;
+
+
+
+
+
+
+
+
+
+    
+    background-color: black;
+    margin: 20px;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s ease-in-out; /* Agrega una transición suave */
+
+    figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1.5s ease-in-out; /* Agrega una transición suave */
+    }
+  
+    img {
+      width: 80px;
+      height: auto;
+      object-fit: cover;
+      position: absolute; /* Agrega esta línea */
+      z-index: 1; /* Asegura que la imagen esté encima del contenido del artículo */
+      transition: opacity 1.5s ease-in-out; /* Agrega una transición suave */
+    }
+
+    .info {
+      h4{
+        margin: 30px;
+        margin-bottom: 40px;
+        font-size: 30px;
+        text-align: center;
+      }
+      display: none;
+      text-align: center;
+      top: 0;
+      left: 0;
+      background-color: transparent;
+      padding: 0px;
+      margin: 0px;
+      z-index: 2; /* Asegura que la información esté por encima de la imagen */
+      position: absolute; /* Agrega esta línea */
+      width: 100%; /* Asegura que la información ocupe todo el ancho del artículo */
+      transition: opacity 0.3s ease-in-out; /* Agrega una transición suave */
+    }
+  }
+
+  
+
+  article:nth-child(-n + 3):hover {
+    background-color: white; /* Cambia el fondo del artículo al pasar el mouse */
+
+    .info {
+      display: block;
+      opacity: 1; /* Muestra la información al pasar el mouse */
+    }
+
+    img {
+      opacity: 1; /* Muestra la imagen al pasar el mouse */
+      top: 0;
+      left: 0;
+      width: 50px;
+    }
+
+  //   .info {
+  //     font-size: t.$font-size;
+  //   }
+  }
+
+  article:nth-last-child(-n + 4):nth-child(n + 4):hover {
+    background-color: white; /* Cambia el fondo del artículo al pasar el mouse */
+
+    .info {
+      display: block;
+      opacity: 1; /* Muestra la información al pasar el mouse */
+    }
+
+    img {
+      opacity: 1; /* Muestra la imagen al pasar el mouse */
+      top: 0;
+      right: 0;
+      width: 50px;
+    }
+  }
+
+}

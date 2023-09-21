@@ -1,0 +1,17 @@
+@use '../base/theme' as t;
+@use '../utilities/variables';
+@use '../utilities/mixins' as m;
+
+.hamburguer {
+    @include m.flexbox(space-between, center, column);
+    width: 25px; /* Puedes ajustar el tamaño según tus necesidades */
+    height: 20px; /* Puedes ajustar el tamaño según tus necesidades */
+    cursor: pointer;
+}
+
+.bar {
+    background-color: t.$text-color; /* Color de las barras (puedes cambiarlo) */
+    height: 3px; /* Grosor de las barras (puedes ajustarlo) */
+    width: 100%; /* Ancho de las barras (100% del contenedor) */
+    transition: 0.3s; /* Transición suave para las barras */
+}

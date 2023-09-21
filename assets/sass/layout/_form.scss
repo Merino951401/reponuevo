@@ -1,0 +1,98 @@
+@use "../base/theme" as u;
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+    #contact-us{
+        background-image: url('../images/main-pattern-dark.png');
+        background-color: #f0f0f0;
+        padding: 20px 10px 200px 10px;
+
+        h3{
+            font-family: u.$title-font;
+            color: u.$text-color;
+            padding: u.$base-spacing;
+            font-size: 30px;
+            text-align: center;
+        }
+
+    form{
+        background: rgb(u.$primary-color, 0.5);
+          box-sizing: border-box;
+          padding: 50px;
+          width: 40%;
+          margin: 0 30% 0 30%;
+          border-radius: 9px;
+          overflow-x: hidden;
+
+        @include m.maxTablet{
+            width: 99%;
+            margin: 0 0.5%;
+            form{
+          background: rgb(u.$primary-color, 0.5);
+          box-sizing: border-box;
+            padding: 20px 60px 10px 30px;
+            width: 99%;
+            margin: 0 0.5%;
+            border-radius: 9px;
+            overflow-x: hidden;
+
+
+        }
+    }
+        // @include m.phone() {
+        //     width: 80%;
+        //     margin: 0% 10%;
+        // }
+
+        button,
+        input,
+        textarea{
+        background: u.$light-backdrop-color;
+        margin: 0.5rem;
+        padding: 0.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+
+        button{
+            border: 0;
+            padding: 0.7rem;
+            border-radius: 5px;
+            margin-left: 94%;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            color: u.$text-color;
+        }
+
+        .input-group{
+            font-family: u.$text-font;
+            font-size: u.$font-size;
+            color: u.$text-color;
+
+
+
+        input,textarea{
+            width: 100%;
+            margin: 0.5rem;
+            padding: 10px 5px;
+            border: 0;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+            &:focus{
+                background: white;
+            }
+        }
+
+        input::placeholder, textarea::placeholder{
+            color: u.$text-color;
+        }
+
+
+        }
+
+    }
+
+    }

@@ -1,0 +1,411 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#contact-us {
+  background-image: url("../images/main-pattern-dark.png");
+  background-color: #f0f0f0;
+  padding: 20px 10px 200px 10px;
+}
+#contact-us h3 {
+  font-family: "Abel", sans-serif;
+  color: #E5E5E5;
+  padding: 1rem;
+  font-size: 30px;
+  text-align: center;
+}
+#contact-us form {
+  background: rgba(35, 55, 77, 0.5);
+  box-sizing: border-box;
+  padding: 50px;
+  width: 40%;
+  margin: 0 30% 0 30%;
+  border-radius: 9px;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  #contact-us form {
+    width: 99%;
+    margin: 0 0.5%;
+  }
+  #contact-us form form {
+    background: rgba(35, 55, 77, 0.5);
+    box-sizing: border-box;
+    padding: 20px 60px 10px 30px;
+    width: 99%;
+    margin: 0 0.5%;
+    border-radius: 9px;
+    overflow-x: hidden;
+  }
+}
+#contact-us form button,
+#contact-us form input,
+#contact-us form textarea {
+  background: rgba(229, 229, 229, 0.3333333333);
+  margin: 0.5rem;
+  padding: 0.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact-us form button {
+  border: 0;
+  padding: 0.7rem;
+  border-radius: 5px;
+  margin-left: 94%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #E5E5E5;
+}
+#contact-us form .input-group {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #E5E5E5;
+}
+#contact-us form .input-group input, #contact-us form .input-group textarea {
+  width: 100%;
+  margin: 0.5rem;
+  padding: 10px 5px;
+  border: 0;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+#contact-us form .input-group input:focus, #contact-us form .input-group textarea:focus {
+  background: white;
+}
+#contact-us form .input-group input::placeholder, #contact-us form .input-group textarea::placeholder {
+  color: #E5E5E5;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/bg-pattern.png");
+}
+
+.main-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px;
+  color: white;
+}
+.main-bar h1 {
+  font-family: "Caveat", monoscape;
+  font-size: 50px;
+}
+.main-bar .hamburguer {
+  display: none;
+}
+@media (max-width: 375px) {
+  .main-bar .hamburguer {
+    display: flex;
+  }
+}
+.main-bar nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.main-bar nav ul li a {
+  margin: 0px 20px;
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+.main-bar nav ul li a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 375px) {
+  .main-bar nav ul li a {
+    display: none;
+  }
+}
+.main-bar nav ul li.highlight a {
+  background-color: rgba(229, 229, 229, 0.3333333333);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.hamburguer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 25px; /* Puedes ajustar el tamaño según tus necesidades */
+  height: 20px; /* Puedes ajustar el tamaño según tus necesidades */
+  cursor: pointer;
+}
+
+.bar {
+  background-color: #E5E5E5; /* Color de las barras (puedes cambiarlo) */
+  height: 3px; /* Grosor de las barras (puedes ajustarlo) */
+  width: 100%; /* Ancho de las barras (100% del contenedor) */
+  transition: 0.3s; /* Transición suave para las barras */
+}
+
+header section {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  text-align: center;
+  color: white;
+}
+header section .abstract h2 {
+  font-size: 15px;
+}
+header section .abstract h3 {
+  font-size: 80px;
+  width: 60%;
+  margin: 0% 20%;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+header section .abstract .btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header section .abstract .btn-container button {
+  background-color: rgba(229, 229, 229, 0.3333333333);
+  padding: 10px 20px;
+  border: none;
+  color: #E5E5E5;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+header section .abstract .btn-container button:hover {
+  background-color: #182634;
+  transition: 0.5s ease;
+}
+
+#what-can-you-see {
+  background-image: url(../images/main-pattern.png);
+  width: 100%;
+}
+#what-can-you-see > h3 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: #E5E5E5;
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  padding: 1rem;
+}
+
+.cards-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cards-container article:nth-child(-n+3) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  background-color: black;
+  margin: 20px;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.3s ease-in-out; /* Agrega una transición suave */
+}
+.cards-container article:nth-child(-n+3) figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1.5s ease-in-out; /* Agrega una transición suave */
+}
+.cards-container article:nth-child(-n+3) img {
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+  position: absolute; /* Agrega esta línea */
+  z-index: 1; /* Asegura que la imagen esté encima del contenido del artículo */
+  transition: opacity 1.5s ease-in-out; /* Agrega una transición suave */
+}
+.cards-container article:nth-child(-n+3) .info {
+  display: none;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  z-index: 2; /* Asegura que la información esté por encima de la imagen */
+  position: absolute; /* Agrega esta línea */
+  width: 100%; /* Asegura que la información ocupe todo el ancho del artículo */
+  transition: opacity 0.3s ease-in-out; /* Agrega una transición suave */
+}
+.cards-container article:nth-child(-n+3) .info h4 {
+  margin: 30px;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+.cards-container article:nth-last-child(-n+4):nth-child(n+4) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  background-color: black;
+  margin: 20px;
+  border-radius: 10px;
+  position: relative;
+  transition: background-color 0.3s ease-in-out; /* Agrega una transición suave */
+}
+.cards-container article:nth-last-child(-n+4):nth-child(n+4) figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1.5s ease-in-out; /* Agrega una transición suave */
+}
+.cards-container article:nth-last-child(-n+4):nth-child(n+4) img {
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+  position: absolute; /* Agrega esta línea */
+  z-index: 1; /* Asegura que la imagen esté encima del contenido del artículo */
+  transition: opacity 1.5s ease-in-out; /* Agrega una transición suave */
+}
+.cards-container article:nth-last-child(-n+4):nth-child(n+4) .info {
+  display: none;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0px;
+  z-index: 2; /* Asegura que la información esté por encima de la imagen */
+  position: absolute; /* Agrega esta línea */
+  width: 100%; /* Asegura que la información ocupe todo el ancho del artículo */
+  transition: opacity 0.3s ease-in-out; /* Agrega una transición suave */
+}
+.cards-container article:nth-last-child(-n+4):nth-child(n+4) .info h4 {
+  margin: 30px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  text-align: center;
+}
+.cards-container article:nth-child(-n+3):hover {
+  background-color: white; /* Cambia el fondo del artículo al pasar el mouse */
+}
+.cards-container article:nth-child(-n+3):hover .info {
+  display: block;
+  opacity: 1; /* Muestra la información al pasar el mouse */
+}
+.cards-container article:nth-child(-n+3):hover img {
+  opacity: 1; /* Muestra la imagen al pasar el mouse */
+  top: 0;
+  left: 0;
+  width: 50px;
+}
+.cards-container article:nth-last-child(-n+4):nth-child(n+4):hover {
+  background-color: white; /* Cambia el fondo del artículo al pasar el mouse */
+}
+.cards-container article:nth-last-child(-n+4):nth-child(n+4):hover .info {
+  display: block;
+  opacity: 1; /* Muestra la información al pasar el mouse */
+}
+.cards-container article:nth-last-child(-n+4):nth-child(n+4):hover img {
+  opacity: 1; /* Muestra la imagen al pasar el mouse */
+  top: 0;
+  right: 0;
+  width: 50px;
+}
+
+footer {
+  padding: 0.5rem;
+  background: #23374D;
+  text-align: center;
+  color: #E5E5E5;
+  font-family: "Abel", sans-serif;
+  font-size: 0.7rem;
+}
+
+#photos-showcase {
+  background-image: url(../images/main-pattern-dark.png);
+}
+
+h3 {
+  text-align: center;
+  font-family: "Abel", sans-serif;
+  color: #E5E5E5;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.photo-set {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+.photo-set figure {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.photo-set figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */

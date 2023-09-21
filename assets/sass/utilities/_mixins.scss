@@ -1,0 +1,37 @@
+@use './variables' as v;
+
+//Mixins breakpoints media queries
+@mixin phone {
+    @media (max-width: v.$device-phone) {
+        @content;
+    }
+}
+
+@mixin maxTablet {
+    @media (max-width: v.$device-tablet) {
+        @content
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$device-laptop) {
+        @content;
+    }
+}
+
+// Mixins for flexbox
+@mixin flexbox($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+//Mixins for grid
+@mixin grid($columns, $spacing) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $spacing;
+}
+
+

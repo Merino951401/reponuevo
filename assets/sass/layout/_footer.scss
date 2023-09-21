@@ -1,0 +1,12 @@
+@use "../base/theme" as u;
+@use "../utilities/variables" as v;
+@use "../utilities/mixins" as m;
+
+footer {
+    padding: 0.5rem;
+    background: u.$primary-color;
+    text-align: center;
+    color: u.$text-color;
+    font-family: "Abel", sans-serif;
+    font-size: 0.7rem;
+}
