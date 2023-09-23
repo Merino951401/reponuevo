@@ -12,6 +12,7 @@ header{
     @include m.flexbox(space-between, center, row);
     padding: 20px;
     color: white;
+    height: 10%;
     h1{
         font-family: t.$logo-font;
         font-size: 50px;
@@ -20,7 +21,7 @@ header{
     .hamburguer{
         display: none;
 
-        @include m.phone {
+        @include m.maxTablet {
             display: flex;
         }
     }
@@ -28,7 +29,10 @@ header{
     nav ul{
         @include m.flexbox(space-around, center, row);
 
-        
+        @include m.maxTablet {
+            display: none;
+        }
+
         li a{
             margin: 0px 20px;
             color: white;
@@ -38,9 +42,7 @@ header{
                 text-decoration: underline;
             }
 
-            @include m.phone {
-                display: none;
-            }
+           
             
         }
 

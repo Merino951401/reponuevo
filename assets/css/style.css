@@ -136,6 +136,7 @@ header {
   flex-direction: row;
   padding: 20px;
   color: white;
+  height: 10%;
 }
 .main-bar h1 {
   font-family: "Caveat", monoscape;
@@ -144,7 +145,7 @@ header {
 .main-bar .hamburguer {
   display: none;
 }
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .main-bar .hamburguer {
     display: flex;
   }
@@ -155,6 +156,11 @@ header {
   align-items: center;
   flex-direction: row;
 }
+@media (max-width: 768px) {
+  .main-bar nav ul {
+    display: none;
+  }
+}
 .main-bar nav ul li a {
   margin: 0px 20px;
   color: white;
@@ -163,11 +169,6 @@ header {
 }
 .main-bar nav ul li a:hover {
   text-decoration: underline;
-}
-@media (max-width: 375px) {
-  .main-bar nav ul li a {
-    display: none;
-  }
 }
 .main-bar nav ul li.highlight a {
   background-color: rgba(229, 229, 229, 0.3333333333);
@@ -198,6 +199,7 @@ header section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 80%;
   font-family: "Abel", sans-serif;
   text-align: center;
   color: white;
