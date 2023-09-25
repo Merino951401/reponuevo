@@ -14,7 +14,7 @@ header section{
     color: white;
 
     .abstract h2{
-        font-size: 15px;
+        font-size: 30px;
     }
 
     .abstract h3{
@@ -34,6 +34,7 @@ header section{
     .abstract .btn-container button{
         background-color: t.$light-backdrop-color;
         padding: 10px 20px;
+        margin: 0px 10px;
         border: none;
         color: t.$text-color;
         font-weight: bold;

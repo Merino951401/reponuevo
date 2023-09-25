@@ -205,7 +205,7 @@ header section {
   color: white;
 }
 header section .abstract h2 {
-  font-size: 15px;
+  font-size: 30px;
 }
 header section .abstract h3 {
   font-size: 80px;
@@ -222,6 +222,7 @@ header section .abstract .btn-container {
 header section .abstract .btn-container button {
   background-color: rgba(229, 229, 229, 0.3333333333);
   padding: 10px 20px;
+  margin: 0px 10px;
   border: none;
   color: #E5E5E5;
   font-weight: bold;
